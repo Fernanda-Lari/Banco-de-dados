@@ -22,3 +22,19 @@ $cidade = '';
 $sql = "";
 
 //executa a consulta SQL. Se falhar, exibe o erro do banco de dados 
+$query = mysqli_query(mysql:$conn,query: $sql) or 
+die(mysqli_error(mysql:$db));
+
+if($query){
+    echo"<center>";
+    echo"cadastro realizado com sucesso <br>";
+    echo"<a href='index.php'> <button title='Home page'>Voltar</button> </a>";
+    echo"</center>";
+
+}
+else {
+    echo"<center>";
+    echo"Erro ao cadastrar! <br>";
+    echo"<a href='index.php'> <button title='Home page'>Voltar</button> </a>";
+    echo"</center>";
+}
